@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6 border border-gray-100;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 
+    transition-colors duration-200 flex items-center gap-2 font-medium
+    disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-50 
+    transition-colors duration-200 flex items-center gap-2 font-medium
+    disabled:opacity-50 disabled:cursor-not-allowed border border-gray-200
+    hover:border-gray-300 shadow-sm;
+  }
+
+  .btn-mark {
+    @apply px-4 py-2 bg-green-50 text-green-700 hover:bg-green-100 
+    transition-colors duration-200 rounded-lg flex items-center gap-2;
+  }
+
+  .input-search {
+    @apply w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg 
+    focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+    transition duration-200 text-gray-900 placeholder-gray-500;
+  }
+
+  .sidebar-item {
+    @apply w-full text-left p-4 rounded-lg hover:bg-gray-50 flex items-center 
+    justify-between transition-colors duration-200 border border-transparent
+    hover:border-gray-200;
+  }
+}
+
+/* レッスンコンテンツのスタイル */
+.lesson-content {
+  @apply space-y-4;
+}
+
+.lesson-content p {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.code-block {
+  @apply my-6 rounded-lg overflow-hidden border border-gray-200;
+}
+
+.code-block h3 {
+  @apply text-sm font-semibold text-gray-700 bg-gray-50 px-4 py-2 border-b border-gray-200;
+}
+
+.code-block pre {
+  @apply bg-gray-900 text-gray-100 p-4 overflow-x-auto m-0;
+  white-space: pre;
+}
+
+.code-block code {
+  @apply font-mono text-sm leading-relaxed;
+}
+
+.result-block {
+  @apply my-6 rounded-lg border-l-4 border-green-500 bg-white;
+}
+
+.result-block h3 {
+  @apply text-sm font-semibold text-gray-700 px-4 py-2 bg-gray-50 border-b border-gray-200;
+}
+
+.result-block > div {
+  @apply p-4;
+}
+
+.note-block {
+  @apply my-6 p-4 rounded-lg bg-blue-50 border border-blue-100;
+}
+
+.note-block h3 {
+  @apply text-sm font-semibold text-blue-700 mb-2;
+}
+
+.note-block p {
+  @apply text-blue-900;
+}
+
+/* シンタックスハイライト */
+.language-jsx {
+  @apply text-gray-100;
+}
+
+/* 基本スタイル */
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* プローズスタイルの拡張 */
+.prose {
+  @apply max-w-none;
+}
+
+.prose h3 {
+  @apply text-lg font-semibold mt-6 mb-4;
+}
+
+.prose pre {
+  @apply m-0;
+}
+
+/* カスタムスクロールバー */
+.code-block pre::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+.code-block pre::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
